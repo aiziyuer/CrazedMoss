@@ -27,8 +27,39 @@ module.exports = function(grunt) {
             }
         },
 
+        bower: {
+            install: {
+                options: {
+                    targetDir: './public/js/lib',
+                    layout: 'byComponent',
+                    install: true,
+                    verbose: false,
+                    cleanTargetDir: false,
+                    cleanBowerDir: false,
+                    bowerOptions: {}
+                }
+            }
+        },
 
-        jshint: { /* jshint的参数 */ },
+        jshint: { /* jshint的参数 */
+            options: {
+                curly: true,
+                eqeqeq: true,
+                immed: true,
+                latedef: true,
+                newcap: true,
+                noarg: true,
+                sub: true,
+                undef: true,
+                unused: true,
+                boss: true,
+                eqnull: true,
+                browser: true,
+                globals: {
+                    jQuery: true
+                }
+            }
+        },
         concat: { /* concat的参数 */ },
         uglify: { /* uglify的参数 */ },
         watch: { /* watch的参数 */

@@ -1,0 +1,21 @@
+{
+  "name": "CrazedMoss",
+  "version": "0.0.0",
+  "homepage": "http://www.aiziyuer.com",
+  "authors": [
+    "spritemoss@gmail.com"
+  ],
+  "description": "CrazedMoss",
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "jquery": "~2.1.4"
+  }
+}
