@@ -10,14 +10,17 @@ module.exports = function(grunt) {
     // 配置Grunt各种模块的参数
     grunt.initConfig({
 
+        // 读取包信息
         pkg: grunt.file.readJSON('package.json'),
 
+        //清理任务，负责构建前的清零准备工作
         clean: {
             css: {
                 src: ["dist/css"]
             }
         },
 
+        //编译Sass文件为标准的css文件, 分为生产和开发环境
         compass: {
             prod: {
                 style: 'compressed',
@@ -36,7 +39,7 @@ module.exports = function(grunt) {
             }
         },
 
-        /* watch的参数 */
+        //Watch任务，可以跟踪文件目录中文件的变化并启动对应的刷新任务来生成必要的文件
         watch: {
             compass: {
                 files: ['src/sass/*.scss'],
@@ -45,5 +48,6 @@ module.exports = function(grunt) {
         }
     });
 
+    //注册对外的任务，项目刚起步，所以只有开发环境
     grunt.registerTask('dev', ['clean', 'compass:dev', 'watch']);
 };
