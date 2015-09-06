@@ -12,9 +12,11 @@ module.exports = function(grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-            '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            '* Copyright (c) <%= grunt.template.today("yyyy") %> ',
+        clean: {
+            css: {
+                src: ["dist/css"]
+            }
+        },
 
         compass: {
             prod: {
@@ -39,17 +41,9 @@ module.exports = function(grunt) {
             compass: {
                 files: ['src/sass/*.scss'],
                 tasks: ['compass:dev']
-            },
-            options: {
-                spawn: false,
             }
         }
     });
 
-    grunt.registerTask('dev', function(target) {
-        //TODO 清理
-        //TODO 全量编译
-        //TODO 启动watch
-        ''
-    });
+    grunt.registerTask('dev', ['clean', 'compass:dev', 'watch']);
 };
