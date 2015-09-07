@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
     // 从node_modules目录加载模块文件
