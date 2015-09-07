@@ -4,6 +4,7 @@
 ## 已经完成
 1. 完成开发环境搭建, `grunt dev`启动；
 2. 支持Sass文件的动态刷新；
+3. 引入Bootstrap作为前端框架;
 
 ## TODO
 1. 使用`bower`进行js库的管理；
